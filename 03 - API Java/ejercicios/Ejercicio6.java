@@ -36,9 +36,8 @@ public class Ejercicio6 {
 		System.out.println(numeros[0] + " " + numeros[1] + " " + 
 				numeros[2] + " " +numeros[3] + " " + numeros[4]);
 		
-		//Mostramos la matriz copia para comprobar
-				System.out.println(copia[0] + " " + copia[1] + " " + 
-						copia[2] + " " +copia[3] + " " + copia[4]);
+		//Mostramos la matriz copia para comprobar , esta vez utilizando el método Arrays.toString
+				System.out.println(Arrays.toString(copia));
 		
 		//Solicitar al usuario que introduzca un valor para buscarlo
 				//en la copia 
