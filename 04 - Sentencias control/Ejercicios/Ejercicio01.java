@@ -5,25 +5,25 @@ public class Ejercicio01 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		//Detectar números primos
+		//Detectar nÃºmeros primos
 		
 		int numero  = 7;
 		
-		boolean primo = false;
+		boolean primo = true;
 		
 		for(int i = 2;i<numero;i++) {
 			if(numero%i==0) {
-				primo = true;
+				primo = false;
 				break;
 				
 			}
 		}
 		
 		if(primo) {
-			System.out.print("Número primo");
+			System.out.print("NÃºmero primo");
 		}
 		else {
-			System.out.println("Número no primo");
+			System.out.println("NÃºmero no primo");
 		}
 		
 		
