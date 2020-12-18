@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class PrincipalEjercicio3 {
 	
 	public static void guardarSerie(Serie series[],Serie s) {
-		//La metemos en la primera posicion vacía de la matriz
+		//La metemos en la primera posicion vacÃ­a de la matriz
 		for(int j = 0;j<series.length;j++) {
 			if(series[j]==null) {
 				series[j] = s;
@@ -40,7 +40,7 @@ public class PrincipalEjercicio3 {
 		int registros = Ejercicio1.contarRegistros(ruta);
 		System.out.println(registros);
 		Serie series[] = new Serie[999];
-		//Lo primero que hace la aplicación es llenar la matriz
+		//Lo primero que hace la aplicaciÃ³n es llenar la matriz
 		//con las series que tenemos en el fichero
 		if(registros>0) {
 			try(BufferedReader bfLector = new BufferedReader(new FileReader(ruta));){
@@ -65,7 +65,7 @@ public class PrincipalEjercicio3 {
 					Serie s = new Serie(titulo,plataforma,capitulos,genero,anho);
 					s.setValoracion(valoracion);
 					
-					//La metemos en la primera posicion vacía de la matriz
+					//La metemos en la primera posicion vacÃ­a de la matriz
 					guardarSerie(series,s);
 					}
 					//***********************************************
@@ -81,7 +81,7 @@ public class PrincipalEjercicio3 {
 		}
 		
 		//*********************************//
-		//Presentar menú
+		//Presentar menÃº
 		int opcion = 0;
 		do {
 		System.out.println("Escoja una opcion");
@@ -106,7 +106,7 @@ public class PrincipalEjercicio3 {
 			System.out.println("Introduce plataforma");
 			String plataforma = lector.nextLine();
 			
-			System.out.println("Introduce género");
+			System.out.println("Introduce gÃ©nero");
 			String genero = lector.nextLine();
 			
 			System.out.println("Introduce capitulos");
@@ -118,7 +118,7 @@ public class PrincipalEjercicio3 {
 			
 			guardarSerie(series,s);
 			
-			//Debemos guardarla también en el fichero
+			//Debemos guardarla tambiÃ©n en el fichero
 			
 			try(BufferedWriter bfEscritor = new BufferedWriter(new FileWriter(ruta,true));){
 				String registroSerie = s.volcarFichero();
@@ -146,9 +146,9 @@ public class PrincipalEjercicio3 {
 				System.out.println(ser.getTitulo());
 				
 			}
-			System.out.println("Introduce el título de la serie");
+			System.out.println("Introduce el tÃ­tulo de la serie");
 			String tituloSerie = lector.nextLine();
-			System.out.println("Introduce la puntuación");
+			System.out.println("Introduce la puntuaciÃ³n");
 			float puntuacion = lector.nextFloat();
 			
 			//Guardamos en el fichero
@@ -163,7 +163,7 @@ public class PrincipalEjercicio3 {
 			}
 			
 			//************************************++
-			//Actualizamos puntuación serie
+			//Actualizamos puntuaciÃ³n serie
 			//Leemos fichero votaciones
 			try(BufferedReader bfLector3 = new BufferedReader(new FileReader(rutaVotos));){
 				
@@ -204,7 +204,7 @@ public class PrincipalEjercicio3 {
 				}
 				
 				//2. Volcar al fichero
-				try(BufferedWriter escritor1 = new BufferedWriter(new FileWriter(ruta));){
+				try(BufferedWriter escritor1 = new BufferedWriter(new FileWriter(ruta,true));){
 					for(Serie ser : series) {
 						if(ser!=null) {
 							escritor1.write(ser.volcarFichero());
@@ -226,9 +226,9 @@ public class PrincipalEjercicio3 {
 			break;
 			
 		case 4:
-			//Mostrar datos serie a partir del título
-			//Hacemos la búsqueda directamente en la matriz
-			System.out.println("Introduce título de la serie");
+			//Mostrar datos serie a partir del tÃ­tulo
+			//Hacemos la bÃºsqueda directamente en la matriz
+			System.out.println("Introduce tÃ­tulo de la serie");
 			lector = new Scanner(System.in);
 			String titulo3 = lector.nextLine();
 			
